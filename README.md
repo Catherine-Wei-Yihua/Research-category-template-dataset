@@ -93,7 +93,6 @@ The generation notebook uses a random seed of `45` with `50` instances per templ
 | [`Templates_2100_Dataset.json`](Templates_2100_Dataset.json) | The generated dataset: 2,100 problems and their labeled candidate responses. |
 | [`Template_Library.pdf`](Template_Library.pdf) | The six operation categories, 42 template definitions, and examples of valid and invalid transformations. |
 | [`Template_Python_Generator.ipynb`](Template_Python_Generator.ipynb) | Python/SymPy generation and validation code. |
-| [`00_Project_Overview.docx`](00_Project_Overview.docx) | Earlier project overview and research context. |
 
 ## Loading the Dataset
 
@@ -122,9 +121,8 @@ To regenerate the dataset, open `Template_Python_Generator.ipynb`, install its `
 
 ## Limitations
 
-- **Single-step supervision:** Records contain candidate transformations, not fully connected solutions or explicit step-to-step dependency chains.
 - **Template coverage:** The dataset reflects the selected 42 template families rather than the full diversity of mathematical problems or natural LLM responses.
-- **Automatic validation:** SymPy-based checks are useful but do not replace exhaustive manual review of every mathematical expression or edge case.
+- **Automatic validation:** SymPy-based checks are useful but do not replace exhaustive manual review of every mathematical expression or edge case in complex-step scenarios.
 - **Representation overlap:** Symbolic simplification may sometimes produce equivalent or duplicate positive representations.
 - **Negative sampling:** Constructed negatives are controlled examples and may not reproduce the distribution of mistakes made by real LLMs.
 
